@@ -1,0 +1,1 @@
+docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli cloudformation delete-stack --stack-name $1 --region=$2

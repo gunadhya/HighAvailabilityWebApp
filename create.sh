@@ -1,0 +1,1 @@
+docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli cloudformation create-stack --stack-name $1 --template-body file://$2  --parameters file://$3 --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM" --region=$4
